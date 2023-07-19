@@ -18,13 +18,25 @@ void	ft_print_error(char *str)
 	exit(1);
 }
 
+void	ft_segurity(t_vars *vars)
+{
+	int	y;
+
+	y = 0;
+	while (vars->aux[y])
+	{
+		if (vars->aux[y] == '\n' && vars->aux[y + 1] == '\n')
+			ft_print_error("Hay una linea incompleta");
+		y++;
+	}
+}
+
 void	ft_ber(t_vars *vars, char *av)
 {
 	int	x;
 
 	vars->file = av;
-	x = ft_strlen (vars->file)-4;
-
+	x = ft_strlen (vars->file) - 4;
 	if (ft_strncmp (vars->file + x, ".ber", 4) != 0)
 	{
 		ft_print_error("El mapa no acaba en \".ber\"");

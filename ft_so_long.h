@@ -52,7 +52,7 @@ typedef struct s_eat
 	int		rest;
 }				t_eat;
 
-int		ft_close(int keycode, t_vars *vars);
+int		ft_close(t_vars *vars);
 char	*ft_readmap(t_vars *vars);
 void	ft_inition1(t_vars *vars);
 int		render(t_vars *vars);
@@ -65,6 +65,7 @@ int		movedown(t_vars *vars);
 void	ft_error(t_vars *vars);
 void	ft_errormap(t_vars *vars);
 void	ft_failchar(t_vars *vars);
+void	ft_segurity(t_vars *vars);
 void	ft_goodmap(t_vars *vars);
 void	ft_full(t_vars *vars, int y, int x);
 void	ft_img(t_vars *vars);

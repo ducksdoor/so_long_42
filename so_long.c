@@ -18,7 +18,7 @@ int	key_hook(int keycode, t_vars *vars)
 
 	aux = 2;
 	if (keycode == 53)
-		ft_close(keycode, vars);
+		ft_close(vars);
 	if (keycode == 0 || keycode == 123)
 		aux = left(vars);
 	else if (keycode == 2 || keycode == 124)
@@ -30,18 +30,12 @@ int	key_hook(int keycode, t_vars *vars)
 	if (aux == 0)
 	{
 		vars->moves++;
-		ft_printf("llevas %d mov:\n", vars->moves);
+		ft_printf("llevas mov: %d \n", vars->moves);
 		render (vars);
 	}
 	ft_finish(vars);
 	return (0);
 }
-void	leaks(void)
-{
-	system("leaks -q so_long");
-} 
-
-
 
 int	main(int ac, char *av[])
 {
@@ -49,8 +43,6 @@ int	main(int ac, char *av[])
 
 	if (ac != 2 && av)
 		ft_print_error("No existe segundo argumento");
-	// atexit(leaks);
-
 	vars = malloc(sizeof(t_vars));
 	ft_ber(vars, av[1]);
 	if (vars == NULL)

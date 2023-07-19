@@ -12,9 +12,8 @@
 
 #include "ft_so_long.h"
 
-int	ft_close(int keycode, t_vars *vars)
+int	ft_close(t_vars *vars)
 {
-	(void) keycode;
 	if (!vars)
 		exit(1);
 	exit(1);
@@ -101,6 +100,7 @@ void	ft_inition1(t_vars *vars)
 
 	x = 0;
 	vars->aux = ft_readmap(vars);
+	ft_segurity(vars);
 	vars->teat = malloc(sizeof(t_eat));
 	vars->player = malloc(sizeof(t_player));
 	vars->teat->rest = 0;
@@ -112,7 +112,7 @@ void	ft_inition1(t_vars *vars)
 			vars->teat->rest++;
 		x++;
 	}
-	 vars->moves = 0;
+	vars->moves = 0;
 	vars->mlx = mlx_init();
 	vars->map = ft_split(vars->aux, '\n');
 	vars->foo = ft_split(vars->aux, '\n');
@@ -120,36 +120,3 @@ void	ft_inition1(t_vars *vars)
 	ft_contx(vars);
 	ft_conty(vars);
 }
-
-/* to do
-
-	3 = SOLO puede aceptar .ber, quiza usar strrchr?
-
-
-
-
-= SI el mapa que no existe que no salga segmentation 
-= retocar el makefi?
-= al acabar comprobar printf y ft_printf.  no puedemn existir printf
-
-imagenes no correctas NO SEGMENTE???
-	¿¿¿¿ BONUS?????
-
-
-En caso de fallos el programa debe terminar correctamente y 
-	devolver “Error\n” seguido de un mensajeexplícito de tu elección.
-que el mapa sea rectangular
--- mitozorro
-que este rodeado de muros
-pasar la norminet
-COMPROBAR PORQUE CIERRA TAN TARDE
-evitar leaks
---invalid char
-iniciar variables en ft especifica. 
-tiene que tener al menos un coleccionable, una salida y un solo personaje
-= ver si el camino es posible a todos los items
-= solo puede abrir archivos .ber
-
-
-	
- */

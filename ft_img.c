@@ -12,20 +12,19 @@
 
 #include "ft_so_long.h"
 
-
 void	ft_img2(t_vars *vars)
 {
 	int		ancho;
 	int		alto;
 	char	*rute;
 
-	rute = ft_strdup("./img/box.xpm");
+	rute = ft_strdup("./textures/box.xpm");
 	vars->box = mlx_xpm_file_to_image(vars->mlx, rute, &ancho, &alto);
 	free(rute);
-	rute = ft_strdup("./img/close.xpm");
+	rute = ft_strdup("./textures/close.xpm");
 	vars->door = mlx_xpm_file_to_image(vars->mlx, rute, &ancho, &alto);
 	free(rute);
-	rute = ft_strdup("./img/open.xpm");
+	rute = ft_strdup("./textures/open.xpm");
 	vars->door2 = mlx_xpm_file_to_image(vars->mlx, rute, &ancho, &alto);
 	free(rute);
 	if (!vars->box || !vars->door || !vars->door2)
@@ -41,13 +40,13 @@ void	ft_img(t_vars *vars)
 	int		alto;
 	char	*rute;
 
-	rute = ft_strdup("./img/steak.xpm");
+	rute = ft_strdup("./textures/steak.xpm");
 	vars->teat->img = mlx_xpm_file_to_image(vars->mlx, rute, &ancho, &alto);
 	free(rute);
-	rute = ft_strdup("./img/floor.xpm");
+	rute = ft_strdup("./textures/floor.xpm");
 	vars->floor = mlx_xpm_file_to_image(vars->mlx, rute, &ancho, &alto);
 	free(rute);
-	rute = ft_strdup("./img/fox.xpm");
+	rute = ft_strdup("./textures/fox.xpm");
 	vars->player->img = mlx_xpm_file_to_image(vars->mlx, rute, &ancho, &alto);
 	free(rute);
 	if (!vars->teat->img || !vars->floor || !vars->player->img)

@@ -1,20 +1,16 @@
-# --- VARIABLES ---
-
 NAME = so_long
-OBJS = $(SRCS%.c=%.o)
 CC = cc
-CCFLAGS = -Wall -Wextra -Werror #-g3 -fsanitize=address
+CCFLAGS = -Wall -Wextra -Werror
 MLX_MAC = -lmlx -framework OpenGL -framework AppKit
-RM = rm -f
-LIBFT_DIR = libft
-LIBFT = $(LIBFT_DIR)/libft.a
-HEADERS = so_long.h
+RM = rm -rf
+
+LIBFT_DIR = libft/
+LIBFT = $(LIBFT_DIR)libft.a
 
 SRCS = so_long.c so_long_utils.c ft_error.c ft_goodmap.c ft_img.c \
 		so_long_utils_2.c ft_render.c ft_move.c
 
-
-# --- RULES ---
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
@@ -26,7 +22,7 @@ $(NAME): $(OBJS) $(LIBFT)
 $(LIBFT):
 	make -C $(LIBFT_DIR)
 
-%.o: %.c $(HEADERS)
+%.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
@@ -38,6 +34,5 @@ fclean: clean
 	$(MAKE) fclean -C $(LIBFT_DIR)
 
 re: fclean all
-	$(MAKE) re -C $(LIBFT_DIR)
 
 .PHONY: all clean fclean re lib
