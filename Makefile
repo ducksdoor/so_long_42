@@ -23,7 +23,7 @@ $(LIBFT):
 	make -C $(LIBFT_DIR)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CCFLAGS) -c -o $@ $<
 
 clean:
 	$(RM) $(OBJS)
