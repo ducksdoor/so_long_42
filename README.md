@@ -1,3 +1,7 @@
+TUTORIAL AQUI!!! 
+
+
+
 Este repositorio es mi ejecución del ejercicio, (del cursus de 42) llamado como so_long. Que consiste en crear un "minijuego" con una libreria en concreto. La minilibX.
 
 Cuando realice este proyecto me obsesione con leer la documentación de esta libreria, para chocarme una y otra vez con funciones que no conseguia que terminaran de funcionar del todo bien.
