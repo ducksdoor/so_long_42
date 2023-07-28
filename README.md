@@ -117,7 +117,38 @@ En este README quiero dejar una pequeña guia de las cosas que me hubiese gustad
 	}		t_player;
 
 
-Guia en proceso! (12% de su creación. Según mi estimación....)
+### 4 Poner una imagen en pantalla:
+ La hoja de corrección te obliga a usar imagenes con formato xpm. Ademas, es obligatorio que dibujes las imagenes que estes usando en el proyecto imprimiendolas directamente en pantalla. 
+ Realmente esto es muy simple. Simplemente seguiremos los siguiente pasos:
+ 	
+  1 = seleccionaremos la imagen que queremos usar.
+  
+  2 = usaremos un conversor de formatos online o alguno que tengamos instalado. Si es necesario, las redimensionaremos (tambien existen páginas online que te pueden proporcionar de forma gratuita este servicio).
+  
+  3 = crearemos una carpeta textures donde guardaremos todas las imagenes (No es solo para que este ordenado, es parte de lo que te piden en e proyecto)
+  
+  4 = introduciremos las imagenes. 
+  
+  5 = Pasamos al codigo. Usare la extructura de datos del ejemplo de arriba: 
+      
+	void	ft_img(t_vars *vars)
+	{
+  		int	ancho;
+		int	alto;
+		char	*rute;
+ 
+ 		vars->teat->img = mlx_xpm_file_to_image(vars->mlx, ./textures/player.xpm") &ancho, &alto);
+  		if (!vars->teat->img)
+   		{
+    			ft_print_error("Hay una imagen que no existe");
+      			exit(1);
+		}
+ 		mlx_put_image_to_window(vars->mlx, w, vars->player->img, 64, 64);
+  	}
+
+ Ahora mismo tendremos una imagen dibujada en la pantalla que hemos creado. 
+
+Guia en proceso! (21% de su creación. Según mi estimación....)
 
 
     
