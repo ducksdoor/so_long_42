@@ -1,11 +1,25 @@
-### TUTORIAL del so_long 42!!! 
+### <span style="color:blue;"> :blue_heart:  **TUTORIAL del so_long 42!!!** </span> :blue_heart:
 
-### Objetivos: 
+### :coffee:  Sobre mi: :coffee:
+
+Este repositorio es mi ejecución del ejercicio, (del cursus de 42) llamado como so_long.
+Consiste en crear un "minijuego"(si podemos llamarlo asi) con la libreria minilibX. En mi caso, no hice más que los bonus más faciles dado que el proyecto se me alargó y decidí no hacerlos. 
+Si quisierais sacar todos los bonus, tendreis que buscar algo mas de información.
+
+Cuando realice este proyecto me obsesione con leer la documentación de esta libreria, para chocarme una y otra vez con funciones que no conseguia que terminaran de funcionar del todo bien.
+En este README quiero dejar una pequeña guia de las cosas que me hubiese gustado encontrar en internet y que realmente si me hubiesen ayudado a avanzar en el proyecto.
+
+
+### :thumbsup: Objetivos: :thumbsup:
 	1 : Facilitar la busqueda de información sobre la Minilibx. 
- 	    En concreto, no perderse entre las funciones que tiene la libreria, 
- 	2 : Que exista información escrita en español para la gente que tiene problemas con el ingles o el frances.
+ 	En concreto, no perderse entre las funciones que tiene la libreria.
+      
+	2 : Presentar y proporcionar una ayuda para el aprendizaje que estas realizando. 
+	Recuerda que copiar es menos gratificante que crear, pero este tutorial puede hacer que no te pierdas.
+	    
+ 	3 : Que exista información escrita en español para la gente que tiene problemas con el ingles o el frances.
 
-### Documentación:
+### :book: Documentación: :book:
  Puedes amplicar la documentación de esta guia en distintas paginas webs, te dejo una lista de los sitios donde yo me informe:
 
  - Para mi gusto, esta es la forma más dificil de enterarse de algo. En la terminal usa el comando : "/usr/share/man/man3/" .
@@ -13,15 +27,20 @@
  - En la última pagina que te dejo en este apartado tienes un monton de funciones tipificadas, entre otras cosas, como la explicación detallada de como funciona la MinilibX :
    	https://harm-smits.github.io/42docs/libs/minilibx .
 
+### :star: 0 Estrategia general :star:
+  Se podria decir que vamos a dividir el proyecto en tres grandes nucles de trabajo.
+  
+  	1 : Hacer funcionar la parte grafica. Es decir; conseguir que las funciones de la minilibX funcionen.
+   	tenemos que ser capaces de abrir y cerrar una ventana (sin leaks), poner las imagenes que hemos elegido dentro de la ventana,
+	ser capaces de que nuestras funciones lean un mapa que le entreguemos y tener la capacidad de mover al personaje dentro del mapa.
+     
+	2 : Gestionar todos los casos en los que el programa tiene que detectar un error y por tanto el mapa entregado
+	no seria un mapa jugable, ademas de ser capaces de detectar el fin de la partida.
+       
+	3 : Pulir los ultimos errores y preparar todo el proyecto para defender sus evaluaciones.
 
-Una última explicación. Este repositorio es mi ejecución del ejercicio, (del cursus de 42) llamado como so_long.
-Consiste en crear un "minijuego" con la libreria minilibX. En mi caso, no hice más que los bonus más faciles dado que mi intención era no hacerlos. 
-Si quisierais sacar todos los bonus, tendreis que buscar algo mas de información.
 
-Cuando realice este proyecto me obsesione con leer la documentación de esta libreria, para chocarme una y otra vez con funciones que no conseguia que terminaran de funcionar del todo bien.
-En este README quiero dejar una pequeña guia de las cosas que me hubiese gustado encontrar en internet y que realmente si me hubiesen ayudado a avanzar en el proyecto.
-
-### 1 Iniciar la ventana:
+### :computer: 1 Iniciar la ventana: :computer:
 
   Para ello si usaremos funciones de la minilibX. Necesitaremos las siguientes funciones:
     A) mlx_init() 
@@ -148,8 +167,26 @@ En este README quiero dejar una pequeña guia de las cosas que me hubiese gustad
 
  Ahora mismo tendremos una imagen dibujada en la pantalla que hemos creado. 
 
-Guia en proceso! (21% de su creación. Según mi estimación....)
 
+TO DO: 
+
+Tambien os dejo una lista enorme de errores que seria recomendable que revisarais y solucionarais antes de dar por terminado el proyecto:ç
+
+	- Solo se pueden abrir archivos .ber como mapa. 
+ 
+ 	- El mapa no puede contener caracteres extraños a lo programado.
+  
+  	O dicho de otra forma, caracteres que no esten en esta lista (1, E, P, C, 0).
+  	- El mapa tiene que estar completamente rodeado de muros (1).
+   
+   	- EL juego tiene que detenerse si una imagen no existe o no es del tipo correcto.
+    	...
+
+Guia en proceso! (30% de su creación. Según mi estimación....)
+
+
+Sin embargo! 
+Has llegado al final de la guia! :tada: :tada: :tada:
 
     
    
